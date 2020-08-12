@@ -1,7 +1,7 @@
 FROM node:latest AS build
 
 ARG BUILD_NUMBER
-RUN test -n "${BUILD_NUMBER}" || (echo "BUILD_NUMBER argument not provided" && false
+RUN test -n "${BUILD_NUMBER}" || (echo "BUILD_NUMBER argument not provided" && false)
 
 WORKDIR /app
 COPY . ./
