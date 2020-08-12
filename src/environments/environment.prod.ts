@@ -1,3 +1,7 @@
 export const environment = {
-  production: true
+  production: true,
+  urls: {
+    github: 'URLS_GITHUB',
+    docker: 'URLS_DOCKER'
+  }
 };
