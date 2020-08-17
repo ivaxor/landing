@@ -3,12 +3,12 @@
     <div class="col-12">
       <span class="text-console-xs">
         {{ emptyTextBlock }}
+
+        <br><br>
       </span>
     </div>
 
-    <div class="col-12 text-center text-console-xs">
-      <br>
-
+    <div class="col-6 text-right text-console-xs">
       <a *ngIf="this.isTextBlockReady" (click)="onNextTextBlockClick()" class="text-link">
         <span *ngIf="this.textBlockIndex < this.fullTextBlocks.length - 1">
           [ ↓ ]
@@ -17,7 +17,9 @@
           [ ↺ ]
         </span>
       </a>
+    </div>
 
+    <div class="col-6 text-left text-console-xs">
       <a (click)="onReturnClick()" class="text-link">
         <span>
           [ ✕ ]
