@@ -1,0 +1,17 @@
+<div class="containter">
+  <div *ngFor="let menuItem of menuItems" class="row">
+    <div class="col-3 text-console">
+      <span *ngIf="menuIndex === menuItem.index">
+        [+]
+      </span>
+      <span *ngIf="menuIndex !== menuItem.index">
+        [ ]
+      </span>
+    </div>
+    <div class="col-9 text-console">
+      <a [routerLink]="menuItem.url">
+        {{ menuItem.text }}
+      </a>
+    </div>
+  </div>
+</div>

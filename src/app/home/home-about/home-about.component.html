@@ -1,0 +1,28 @@
+<div class="containter">
+  <div class="row">
+    <div class="col-12">
+      <span class="text-console-xs">
+        {{ emptyTextBlock }}
+      </span>
+    </div>
+
+    <div class="col-12 text-center text-console-xs">
+      <br>
+
+      <a *ngIf="this.isTextBlockReady" (click)="onNextTextBlockClick()" class="text-link">
+        <span *ngIf="this.textBlockIndex < this.fullTextBlocks.length - 1">
+          [ ↓ ]
+        </span>
+        <span *ngIf="this.textBlockIndex === this.fullTextBlocks.length - 1">
+          [ ↺ ]
+        </span>
+      </a>
+
+      <a (click)="onReturnClick()" class="text-link">
+        <span>
+          [ ✕ ]
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
